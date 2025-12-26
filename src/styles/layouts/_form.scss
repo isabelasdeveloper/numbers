@@ -1,0 +1,22 @@
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  &-title {
+    @include mix.label-medium();
+    color: var.$content-primary;
+  }
+  &-description {
+    @include mix.p-large();
+    color: var.$content-secondary;
+  }
+}

@@ -1,9 +1,20 @@
 @use "/src/styles/abstract/mixins" as mix;
 @use "/src/styles/abstract/variaveis" as var;
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 108px;
+  margin: 0 5em;
+}
+
 .container-title {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  grid-column: 1;
+  grid-row: 1;
   span {
     @include mix.overline();
     text-transform: uppercase;
@@ -12,4 +23,43 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  h1 {
+    @include mix.display-large();
+    text-transform: uppercase;
+    color: var.$content-primary;
+  }
 }
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  grid-column: 1;
+  grid-row: 2;
+  //card de perguntas
+  .info {
+    display: flex;
+    align-items: top;
+    gap: 8px;
+    &-icon {
+      color: var.$content-brand;
+      width: 20px;
+      height: 20px;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      &-title {
+        @include mix.p-medium();
+        color: var.$content-brand;
+      }
+      &-desc {
+        @include mix.p-small();
+        color: var.$content-secondary;
+      }
+    }
+  }
+}
+
+// .form{}

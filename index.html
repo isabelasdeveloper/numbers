@@ -3,19 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8afb87ac31.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="/src/scripts/main.js"></script>
-    <link rel="icon" type="image/x-icon" href="/public/icon/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/public/icons/favicon.svg" />
     <title>Numbers</title>
   </head>
   <body>
     <header>
-      <img src="/public/icon/favicon.svg" alt="Logo do Numbers" />
+      <img src="/public/icons/favicon.svg" alt="Logo do Numbers" />
       <h1>Numbers</h1>
     </header>
+
     <main class="container">
       <section class="container-title">
         <span>Online - gratuito</span>
         <h1>Sorteador de números</h1>
+      </section>
+
+      <section class="container-info">
+        <!-- card 1 -->
+        <div class="info">
+          <img
+            class="info-icon"
+            src="/public/icons/user-question.svg"
+            alt="#"
+          />
+          <div class="info-text">
+            <h3 class="info-text-title">
+              Como funciona o sorteador de números?
+            </h3>
+            <p class="info-text-desc">
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="info">
+          <img
+            class="info-icon"
+            src="/public/icons/user-question.svg"
+            alt="#"
+          />
+          <div class="info-text">
+            <h3 class="info-text-title">
+              Posso escolher o intervalo dos números?
+            </h3>
+            <p class="info-text-desc">
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="form">
+        <div class="intro">
+          <h3 class="intro-title">QUERO SORTEAR</h3>
+          <p class="intro-description">
+            defina o intervalo e a quantidade de números, clique em "Sortear" e
+            veja os resultados na tela. É rápido e fácil!
+          </p>
+        </div>
       </section>
     </main>
   </body>
