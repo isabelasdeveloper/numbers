@@ -1,0 +1,15 @@
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
+
+.container-title {
+  display: flex;
+  flex-direction: column;
+  span {
+    @include mix.overline();
+    text-transform: uppercase;
+    background: var.$gradient-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

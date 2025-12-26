@@ -1,3 +1,23 @@
-@use "./abstract/variaveis";
-@use "./abstract/mixins";
+@use "./abstract/variaveis" as var;
+@use "./abstract/mixins" as mix;
 @use "./abstract/reset";
+
+@use "./layouts/header";
+@use "./layouts/container";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:wght@100..700&family=Sora:wght@100..800&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 22.66%,
+      rgba(0, 0, 0, 0.54) 100%
+    ),
+    url("/public/images/pattern.png"), var.$bg-primary;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: center, top left, center;
+  background-size: auto, 300px 300px, auto;
+}

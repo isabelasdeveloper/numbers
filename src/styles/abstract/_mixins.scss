@@ -1,1 +1,45 @@
-@use "./variaveis" as var;
+@mixin font($ff, $fs, $lh, $w) {
+  font-family: $ff;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $w;
+}
+
+//SORA
+@mixin display-large() {
+  @include font("Sora", 4.5rem, 130%, 800); //72px
+}
+
+@mixin display-medium() {
+  @include font("Sora", 2.5rem, 130%, 800); //40px
+}
+
+@mixin display-small() {
+  @include font("Sora", 2rem, 130%, 700); //32px
+}
+
+//ROBOTO MONO
+@mixin overline() {
+  @include font("Roboto Mono", 1rem, 150%, 700); //16px
+}
+
+//ROBOTO FLEX
+@mixin p-large() {
+  @include font("Roboto Flex", 1rem, 150%, 500); //16px
+}
+
+@mixin p-medium() {
+  @include font("Roboto Flex", 0.875rem, 150%, 500); //14px
+}
+
+@mixin p-small() {
+  @include font("Roboto Flex", 0.75rem, 150%, 500); //12px
+}
+
+@mixin label-medium() {
+  @include font("Roboto Flex", 1.25rem, 150%, 700); //20px
+}
+
+@mixin label-small() {
+  @include font("Roboto Flex", 1, 150%, 700); //16px
+}
