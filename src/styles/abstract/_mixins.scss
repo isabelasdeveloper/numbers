@@ -41,5 +41,5 @@
 }
 
 @mixin label-small() {
-  @include font("Roboto Flex", 1, 150%, 700); //16px
+  @include font("Roboto Flex", 1rem, 150%, 700); //16px
 }

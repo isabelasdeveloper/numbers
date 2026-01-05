@@ -1,0 +1,57 @@
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
+
+.switch-div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slider {
+  background: var.$content-tertiary;
+  border-radius: 16px;
+  padding: 3px;
+  cursor: pointer;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  align-items: center;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 20px;
+  box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset,
+    rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset, #22cc3f 0px 0px 0px 0px inset,
+    rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+}
+
+//BOLINHA DO SWITCH
+.slider::after {
+  content: "";
+  display: flex;
+  width: 14px;
+  height: 14px;
+  background: var.$content-tertiary;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.06));
+  border-radius: 200px;
+  position: absolute;
+  transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  will-change: left, background-color;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+  background: var.$gradient-bg;
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+  left: 13px;
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.switch-text {
+  @include mix.p-small();
+  color: var.$content-primary;
+}

@@ -1,12 +1,17 @@
-@use '/src/styles/abstract/mixins' as mix;
-@use '/src/styles/abstract/variaveis' as var;
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   column-gap: 108px;
-  margin: 0 10em;
+  padding-bottom: 5em;
+
+  @media (max-width: 1175px) {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
 }
 
 .container-title {
@@ -15,6 +20,7 @@
   gap: 12px;
   grid-column: 1;
   grid-row: 1;
+  white-space: nowrap;
   span {
     @include mix.overline();
     text-transform: uppercase;
@@ -27,6 +33,9 @@
     @include mix.display-large();
     text-transform: uppercase;
     color: var.$content-primary;
+    @media (max-width: 500px) {
+      @include mix.display-medium();
+    }
   }
 }
 
@@ -37,10 +46,14 @@
   grid-column: 1;
   grid-row: 2;
   margin-top: 38px;
+
+  @media (max-width: 1175px) {
+    grid-row: 3;
+  }
   //card de perguntas
   .info {
     display: flex;
-    align-items: top;
+    align-items: flex-start;
     gap: 8px;
     &-icon {
       color: var.$content-brand;
@@ -51,7 +64,6 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
-      width: 60%;
       &-title {
         @include mix.p-medium();
         color: var.$content-brand;

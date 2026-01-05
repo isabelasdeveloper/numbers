@@ -1,0 +1,35 @@
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-title {
+  @include mix.label-medium();
+  color: var.$content-primary;
+  text-transform: uppercase;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: var.$bg-tertiary;
+  border-radius: 16px;
+}
+
+.result-number {
+  @include mix.display-medium();
+  color: var.$content-brand;
+}

@@ -1,0 +1,43 @@
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 22.66%,
+      rgba(0, 0, 0, 0.54) 100%
+    ),
+    url("/public/images/pattern.png"), var.$bg-primary;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: center, top left, center;
+  background-size: auto, 300px 300px, auto;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5em;
+  margin: 5em;
+  @media (max-width: 500px) {
+    gap: 2.5em;
+    align-items: center;
+  }
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hidden {
+  display: none !important;
+  content: none;
+}

@@ -17,13 +17,13 @@ $accent-lime: #d1dc97;
 $accent-red: #e9a9b3;
 
 $gradient-border: linear-gradient(
-  #77c0af 0%,
-  #d1dc97 14.84%,
-  #e9a9b3 32.15%,
-  #d586e0 65.79%,
-  #91a1fa 84.58%
+  $accent-green 0%,
+  $accent-lime 14.84%,
+  $accent-red 32.15%,
+  $accent-pink 65.79%,
+  $accent-blue 84.58%
 );
 
-$gradient-bg: linear-gradient (#d586e0 0%, #91a1fa 98.93%);
+$gradient-bg: linear-gradient(91deg, $accent-pink 0%, $accent-blue 98.93%);
 
 $gradient-content: linear-gradient(#c7c9cc 0%, #3d3d3d 100%);

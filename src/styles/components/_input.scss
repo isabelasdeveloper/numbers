@@ -1,0 +1,19 @@
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
+
+.input-number {
+  @include mix.display-small();
+  background-color: var.$bg-secondary;
+  border-radius: 8px;
+  width: 90px;
+  height: 48px;
+  border: 1px solid var.$bg-secondary;
+  outline: none;
+  text-align: center;
+  color: var.$content-primary;
+  font-size: 24px;
+  &:focus {
+    background-color: #24222e;
+    border: 2px solid var.$gradient-border;
+  }
+}

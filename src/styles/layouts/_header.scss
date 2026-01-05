@@ -1,14 +1,13 @@
-@use '/src/styles/abstract/mixins' as mix;
-@use '/src/styles/abstract/variaveis' as var;
+@use "/src/styles/abstract/mixins" as mix;
+@use "/src/styles/abstract/variaveis" as var;
 
-header {
+.header {
   display: flex;
   align-items: center;
-  width: 100%;
-  justify-content: flex-start;
   gap: 11px;
-  margin: 5em;
-  padding-left: 120px;
+  @media (max-width: 500px) {
+    align-items: center;
+  }
   img {
     width: 34px;
     height: 34px;
