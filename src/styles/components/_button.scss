@@ -1,5 +1,5 @@
-@use "/src/styles/abstract/mixins" as mix;
-@use "/src/styles/abstract/variaveis" as var;
+@use '/src/styles/abstract/mixins' as mix;
+@use '/src/styles/abstract/variaveis' as var;
 
 .button {
   @include mix.label-small();
@@ -13,11 +13,12 @@
   border-radius: 20px;
   transition: background 0.3s;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .button::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   border: 10px solid transparent;
@@ -40,12 +41,12 @@
 .button-wrapper,
 .text,
 .icon {
-  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   color: #fff;
+  z-index: 1;
 }
 
 .text {

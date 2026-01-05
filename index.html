@@ -84,8 +84,6 @@
                   class="input-number"
                   id="quantity"
                   type="number"
-                  placeholder="0"
-                  min="1"
                   required
                 />
               </div>
@@ -95,19 +93,12 @@
                   class="input-number"
                   id="inicial"
                   type="number"
-                  placeholder="0"
                   required
                 />
               </div>
               <div class="numbers-box">
                 <label for="end">até</label>
-                <input
-                  class="input-number"
-                  id="end"
-                  type="number"
-                  placeholder="100"
-                  required
-                />
+                <input class="input-number" id="end" type="number" required />
               </div>
             </div>
 
@@ -122,7 +113,7 @@
             </div>
           </div>
 
-          <div class="result hidden" aria-live="polite" aria-atomic="true">
+          <div class="result hidden">
             <h3 class="result-title">Resultado do sorteio</h3>
             <ul class="list">
               <!-- <li class="item">
@@ -131,18 +122,19 @@
             </ul>
           </div>
 
-          <button type="button" class="button" id="button-shuffle">
+          <div type="button" class="button" id="button-shuffle">
             <div class="button-wrapper">
               <div class="text">Sortear</div>
-              <i class="fa-solid fa-shuffle icon" aria-hidden="true"></i>
+              <i class="fa-solid fa-shuffle icon"></i>
             </div>
-          </button>
-          <button type="button" class="button hidden" id="button-repeat">
+          </div>
+
+          <div type="button" class="button hidden" id="button-repeat">
             <div class="button-wrapper">
               <div class="text">Sortear Novamente</div>
               <i class="fa-solid fa-repeat icon" aria-hidden="true"></i>
             </div>
-          </button>
+          </div>
         </section>
       </section>
     </main>

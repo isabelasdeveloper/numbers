@@ -1,5 +1,5 @@
-@use "/src/styles/abstract/mixins" as mix;
-@use "/src/styles/abstract/variaveis" as var;
+@use '/src/styles/abstract/mixins' as mix;
+@use '/src/styles/abstract/variaveis' as var;
 
 .form {
   display: flex;
@@ -66,5 +66,18 @@
       color: var.$content-secondary;
       text-transform: uppercase;
     }
+  }
+}
+
+.input-number {
+  // Remove as setas no Firefox
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+  // Remove as setas no Chrome, Safari, Edge e Opera
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }

@@ -1,5 +1,5 @@
-@use "/src/styles/abstract/mixins" as mix;
-@use "/src/styles/abstract/variaveis" as var;
+@use '/src/styles/abstract/mixins' as mix;
+@use '/src/styles/abstract/variaveis' as var;
 
 body {
   display: flex;
@@ -11,7 +11,7 @@ body {
       rgba(0, 0, 0, 0.9) 22.66%,
       rgba(0, 0, 0, 0.54) 100%
     ),
-    url("/public/images/pattern.png"), var.$bg-primary;
+    url('/public/images/pattern.png'), var.$bg-primary;
   background-repeat: no-repeat, repeat, no-repeat;
   background-position: center, top left, center;
   background-size: auto, 300px 300px, auto;
