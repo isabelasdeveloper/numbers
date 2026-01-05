@@ -1,0 +1,9 @@
+# Permite que todos os robôs acessem o site
+User-agent: *
+Disallow:
+
+# Bloqueia pastas que não precisam ser indexadas
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /styles/

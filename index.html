@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sorteador de números online gratuito. Escolha o intervalo e a quantidade, sorteie e veja os resultados na tela rapidamente."
+    />
+
     <script
       src="https://kit.fontawesome.com/8afb87ac31.js"
       crossorigin="anonymous"
@@ -13,10 +18,10 @@
   </head>
   <body>
     <main>
-      <section class="header">
+      <header class="header">
         <img src="/public/icons/favicon.svg" alt="Logo do Numbers" />
         <h1>Numbers</h1>
-      </section>
+      </header>
       <section class="container">
         <section class="container-title">
           <span>Online - gratuito</span>
@@ -29,7 +34,8 @@
             <img
               class="info-icon"
               src="/public/icons/user-question.svg"
-              alt="#"
+              alt=""
+              aria-hidden="true"
             />
             <div class="info-text">
               <h3 class="info-text-title">
@@ -46,7 +52,8 @@
             <img
               class="info-icon"
               src="/public/icons/user-question.svg"
-              alt="#"
+              alt=""
+              aria-hidden="true"
             />
             <div class="info-text">
               <h3 class="info-text-title">
@@ -73,15 +80,34 @@
             <div class="numbers">
               <div class="numbers-box">
                 <label for="quantity">Números</label>
-                <input class="input-number" id="quantity" type="text" />
+                <input
+                  class="input-number"
+                  id="quantity"
+                  type="number"
+                  placeholder="0"
+                  min="1"
+                  required
+                />
               </div>
               <div class="numbers-box">
                 <label for="inicial">De</label>
-                <input class="input-number" id="inicial" type="text" />
+                <input
+                  class="input-number"
+                  id="inicial"
+                  type="number"
+                  placeholder="0"
+                  required
+                />
               </div>
               <div class="numbers-box">
                 <label for="end">até</label>
-                <input class="input-number" id="end" type="text" />
+                <input
+                  class="input-number"
+                  id="end"
+                  type="number"
+                  placeholder="100"
+                  required
+                />
               </div>
             </div>
 
@@ -90,11 +116,13 @@
                 <input type="checkbox" id="no-repeat" />
                 <span class="slider"></span>
               </label>
-              <span class="switch-text">Não repetir número</span>
+              <label class="switch-text" for="no-repeat"
+                >Não repetir número</label
+              >
             </div>
           </div>
 
-          <div class="result hidden">
+          <div class="result hidden" aria-live="polite" aria-atomic="true">
             <h3 class="result-title">Resultado do sorteio</h3>
             <ul class="list">
               <!-- <li class="item">
@@ -103,18 +131,18 @@
             </ul>
           </div>
 
-          <div class="button" id="button-shuffle">
+          <button type="button" class="button" id="button-shuffle">
             <div class="button-wrapper">
               <div class="text">Sortear</div>
-              <i class="fa-solid fa-shuffle icon"></i>
+              <i class="fa-solid fa-shuffle icon" aria-hidden="true"></i>
             </div>
-          </div>
-          <div class="button hidden" id="button-repeat">
+          </button>
+          <button type="button" class="button hidden" id="button-repeat">
             <div class="button-wrapper">
               <div class="text">Sortear Novamente</div>
-              <i class="fa-solid fa-repeat icon"></i>
+              <i class="fa-solid fa-repeat icon" aria-hidden="true"></i>
             </div>
-          </div>
+          </button>
         </section>
       </section>
     </main>
